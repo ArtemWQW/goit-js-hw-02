@@ -1,15 +1,14 @@
 function checkForSpam(message) {
-    const lowCase = message.toLowerCase();
+    const normalizedMessage = message.toLowerCase();
 
-    if (lowCase.includes("spam")) {
+    if (normalizedMessage.includes("spam")) {
         return true;
-    } else if (lowCase.includes("sale")) {
-        return true} else {
-            return false}
-
-}
-
-
+      } else if (normalizedMessage.includes("sale")) {
+        return true;
+      } else {
+        return false;
+      }
+    }
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
 console.log(checkForSpam("Get best sale offers now!")); // true
